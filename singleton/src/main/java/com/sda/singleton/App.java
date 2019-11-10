@@ -1,6 +1,4 @@
-package com.sda.patterns;
-
-import com.sda.patterns.singleton.Singleton;
+package com.sda.singleton;
 
 public class App {
     static class Task1 implements Runnable{
@@ -20,6 +18,7 @@ public class App {
     }
     public static void main( String[] args )
     {
+        System.getSecurityManager();
         Thread thread1 = new Thread(new Task1());
         Thread thread2 = new Thread(new Task2());
 
